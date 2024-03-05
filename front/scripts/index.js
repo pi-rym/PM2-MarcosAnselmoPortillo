@@ -36,14 +36,24 @@ function convertMovieToHtml (movie){
 
     const divMovie = document.createElement("div");
 
+    titleTag.className="title";
+    yearTag.className ="year";
+    directorTag.className = "director";
+    durationTag.className =  "duration";
+    genreTag.className= "genre" ;
+    rateTag.className= "rate";
+    posterTag.className= "poster";
+    
+    let stringGenre = genre.join(", ") + ".";
+
     titleTag.textContent = `${title}`;
     yearTag.textContent = `Year: ${year}`;
     directorTag.textContent = `Directed by: ${director}`;
     durationTag.textContent = `Duration: ${duration}.`;
-    genreTag.textContent = `Genre: ${genre}`;
+    genreTag.textContent = `Genre: ${stringGenre}`;
     rateTag.innerHTML = `Rating: <i>${rate}/10</i>`;
     posterTag.src = poster;
-    posterTag.alt = "Poster";
+    posterTag.alt = `${title}`;
 
     divMovie.appendChild(titleTag);
     divMovie.appendChild(posterTag);
@@ -64,7 +74,7 @@ function convertAllMovies(){
     moviesContainer.innerHTML = '';
     const movies = repository.getAllMovies();
     const moviesHtml = movies.map(convertMovieToHtml);
-    moviesHtml.forEach(m=>moviesContainer.appendChild(m));
+    moviesHtml.forEach(movie=>moviesContainer.appendChild(movie));
 }
 
 convertAllMovies();

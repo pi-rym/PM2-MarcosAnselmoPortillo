@@ -1,0 +1,71 @@
+/* Styles for highlights section */
+#highlights-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#highlights-header h2 {
+  font-size: 24px;
+}
+
+/* Styles for movies container */
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Styles for individual movie cards */
+#movies .movie {
+  width: 300px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for movie title */
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie year */
+.year {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie director */
+.director {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie duration */
+.duration {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie genre */
+.genre {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie rate */
+.rate {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Styles for movie poster */
+.poster {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
