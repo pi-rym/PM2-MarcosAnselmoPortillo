@@ -17,7 +17,7 @@ body {
     margin: 0;
   }
   
-  nav ul {
+  /* nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ body {
   nav ul li a {
     color: white;
     text-decoration: none;
-  }
+  } */
   
   main {
     padding: 20px;
