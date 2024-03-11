@@ -17,7 +17,6 @@ class CarritoCompra {
   calcularTotal() {
     let suma = 0;
     for (let i = 0; i < this.carrito.length; i++) {
-      //console.log(this.carrito[i]);
       suma += this.carrito[i].price * this.carrito[i].quantity;
     }
     return suma;
@@ -26,9 +25,7 @@ class CarritoCompra {
   aplicarDescuento(descuento) {
     const descuentoPorciento = descuento / 100;
     let totalSinDescuento =  this.calcularTotal();
-    //console.log(totalSinDescuento);
     let totalConDescuento = totalSinDescuento - totalSinDescuento * descuentoPorciento;
-    //console.log(totalConDescuento);
     return totalConDescuento;
   }
 
