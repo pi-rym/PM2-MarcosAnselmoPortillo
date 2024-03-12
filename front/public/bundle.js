@@ -35,7 +35,7 @@ eval("const Movie = __webpack_require__( /*! ../modules/Movie.js */ \"./modules/
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const renderMovies = __webpack_require__(/*! ./renderMovies */ \"./scripts/renderMovies.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\naxios.get('https://students-api.up.railway.app/movies')\r\n  .then(response => {\r\n    const moviesData = response.data;\r\n    renderMovies(moviesData);\r\n  })\r\n  .catch(error => {\r\n    console.error('Error fetching movies:', error);\r\n  });\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const renderMovies = __webpack_require__(/*! ./renderMovies */ \"./scripts/renderMovies.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\naxios.get('https://students-api.up.railway.app/movies')\r\n  .then(response => {\r\n    const moviesData = response.data;\r\n    renderMovies(moviesData);\r\n  })\r\n  .catch(error => {\r\n    console.error('Error fetching movies:', error.message);\r\n  });\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 

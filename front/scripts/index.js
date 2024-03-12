@@ -7,5 +7,5 @@ axios.get('https://students-api.up.railway.app/movies')
     renderMovies(moviesData);
   })
   .catch(error => {
-    console.error('Error fetching movies:', error);
+    console.error('Error fetching movies:', error.message);
   });
