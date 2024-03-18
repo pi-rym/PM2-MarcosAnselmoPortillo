@@ -1,15 +1,13 @@
-const Repository = require("../modules/Repository");
-
-const repository = new Repository();
+const Movie = require("../models/Movie");
 
 module.exports = {
   getMovies: async () => {
     try {
-        await repository.loadMovies();
-        return repository.getAllMovies();       
+      const movies = await Movie.find();
+      return movies;
     } catch (error) {
-        console.log('Error getting Movies', error);
-        throw error;
+      console.log("Error getting Movies", error);
+      throw error;
     }
-    }
-}
+  },
+};

@@ -1,4 +1,4 @@
-const Movie = require('./Movie');
+const Movie = require("./Movie");
 
 const movies = [
   {
