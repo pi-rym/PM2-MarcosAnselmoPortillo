@@ -142,8 +142,9 @@
                   class="form-control"
                   id="rate"
                   required
-                  min="0"
+                  min="1"
                   max="10"
+                  step="0.1"
                 />
               </div>
               <div class="form-group">
@@ -151,12 +152,7 @@
                 <input type="url" class="form-control" id="poster" required />
               </div>
               <button type="submit" class="btn btn-dark">Send</button>
-              <button
-                id="limpiarBtn"
-                type="button"
-                class="btn btn-secondary"
-                onclick="limpiarFormulario()"
-              >
+              <button id="limpiarBtn" type="button" class="btn btn-secondary">
                 Reset form
               </button>
             </form>
@@ -167,42 +163,6 @@
     <footer>
       <p>&copy; 2024 - M2 Project - Author: Marcos Portillo</p>
     </footer>
-
-    <script>
-      function limpiarFormulario() {
-        document.getElementById("movieForm").reset();
-      }
-
-      document
-        .getElementById("movieForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const title = document.getElementById("title").value;
-          const year = document.getElementById("year").value;
-          const director = document.getElementById("director").value;
-          const duration = document.getElementById("duration").value;
-          const genre = document.getElementById("genre").value;
-          const rate = document.getElementById("rate").value;
-          const poster = document.getElementById("poster").value;
-
-          if (
-            title &&
-            year &&
-            director &&
-            duration &&
-            genre &&
-            rate &&
-            poster
-          ) {
-            //console.log(title, year, director, duration, genre, rate, poster);
-            //
-            alert("Formulario enviado correctamente");
-            limpiarFormulario();
-          } else {
-            alert("Por favor completa todos los campos");
-          }
-        });
-    </script>
+    <script src="../public/createMovie.bundle.js"></script>
   </body>
 </html>
