@@ -10,4 +10,14 @@ module.exports = {
       throw error;
     }
   },
+  addMovie: async (movieData) => {
+    try {
+      const movie = new Movie(movieData);
+      await movie.save();
+      return movie;
+    } catch (error) {
+      throw error;
+    }
+  }
 };
+
